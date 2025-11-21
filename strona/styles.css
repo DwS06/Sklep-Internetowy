@@ -1,0 +1,347 @@
+/* Cała strona */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #2b2b2b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar – sticky u góry */
+.navbar {
+    flex: 0 0 auto; /* nie rośnie ani nie kurczy się */
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 100;
+}
+
+/* Główna część strony */
+/* Wyśrodkowanie formularza i nagłówka */
+main {
+    flex: 1 1 auto;   
+    overflow-y: auto; 
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* wyśrodkowanie formularza poziomo */
+}
+
+/* Nagłówek formularza */
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center; /* wyśrodkowanie napisu "Rejestracja" */
+}
+
+
+/* Footer – sticky u dołu */
+.footer {
+    flex: 0 0 auto; /* nie rośnie ani nie kurczy się */
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Scrollbar main (opcjonalnie) */
+main::-webkit-scrollbar {
+    width: 8px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Przyciski logowanie/rejestracja – ciemniejsze */
+/* Przyciski logowania i rejestracji – poprawione */
+.auth-btn {
+    background-color: #444;  /* Ciemny jak koszyk */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none; /* To jest kluczowe dla <a> */
+    display: inline-block; /* Żeby działały jak przyciski */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.auth-btn:hover {
+    background-color: #333;
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Styl koszyka */
+
+
+/* Koszyk – taki sam wygląd jak przyciski logowania */
+.cart-btn {
+    background-color: #444; /* ciemne jak login/register */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* taki sam rozmiar */
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex; 
+    align-items: center;
+    gap: 8px; /* odstęp między ikoną a tekstem */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.cart-btn:hover {
+    background-color: #333;
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+}
+
+
+/* Main Content */
+
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    background-color: #3a3a3a; /* Ciemnoszare */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    display: inline-block; /* żeby <a> zachowywał się jak przycisk */
+    text-decoration: none; /* usunięcie podkreślenia */
+}
+
+.category-btn:hover {
+    background-color: #2e2e2e; /* Ciemniejsze przy hover */
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1); /* Mocny cień */
+}
+
+/* Footer */
+
+/* Formularz logowania */
+.login-form {
+    background-color: #1f1f1f;
+    padding: 25px;
+    width: 320px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+}
+
+.login-form label {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.login-form input {
+    width: 100%;          /* taka sama szerokość jak przycisk */
+    padding: 12px;        /* dopasowany padding */
+    border: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box; /* ZAPOBIEGA rozszerzaniu się inputu */
+}
+
+.login-form input:focus {
+    outline: 2px solid #555;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #444;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(0,0,0,1);
+}
+.register-link {
+    color: #ccc;            /* jasnoszary tekst */
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-link a {
+    color: #ff6347;         /* pomarańczowy link */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.register-link a:hover {
+    color: #e55347;         /* ciemniejszy pomarańcz przy hover */
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* usuwa podkreślenie */
+    color: white;          /* tekst logo zachowuje kolor */
+}
+
+.products-page{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+
+
+/* Main – zajmuje pozostałą wysokość i jest flexem */
+main.products-page {
+    flex: 1 1 auto;
+    display: flex;           /* Ustawiamy flex aby kolumny były obok siebie */
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;        /* Scroll jeśli za dużo zawartości */
+}
+
+/* Lewa kolumna – panel filtrów */
+.filters {
+    flex: 0 0 250px;         /* stała szerokość */
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    box-sizing: border-box;
+    height: fit-content;     /* dostosowuje wysokość do zawartości */
+}
+
+/* Prawa kolumna – kafelki produktów */
+.products {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    overflow-y: auto;
+}
+
+/* Kafelki produktów */
+.product-card {
+    background-color: #1f1f1f;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    height: 150px; /* Stała wysokość obrazka */
+}
+
+.product-card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.product-card p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+/* Przycisk w kafelku */
+.product-card .submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.95rem;
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card .submit-btn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(0,0,0,1);
+}
+
+/* Formularz filtrów – styl select i input */
+.filters select,
+.filters input[type="number"] {
+    width: 100%;
+    padding: 6px 8px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #333;
+    color: white;
+    box-sizing: border-box;
+}
+
+.filters button.submit-btn {
+    width: 100%;
+}
